@@ -8,8 +8,8 @@
 #include "libs/student.h"
 
 int main(int _argc, char **_argv){
-    struct dorm_t *dorms = malloc( 100 * sizeof(struct dorm_t));
-    struct student_t *students = malloc(100 * sizeof(struct student_t));
+    struct dorm_t *dorms = malloc( 256 * sizeof(struct dorm_t));
+    struct student_t *students = malloc(256 * sizeof(struct student_t));
     char input[100];
     char id[12];
     char student_name[40];
