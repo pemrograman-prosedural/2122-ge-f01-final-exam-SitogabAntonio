@@ -39,8 +39,22 @@ int main(int _argc, char **_argv)
     do
     {
         fflush(stdin);
-        fgets(input, 100, stdin);
-        input[strlen(input) - 1] = '\0';
+        input[0] = '\0';
+        int c = 0;
+        while (1)
+        {
+            char x = getchar();
+            if (x == '\r')
+            {
+                continue;
+            }
+            if (x == '\n')
+            {
+                break;
+            }
+            input[c] = x;
+            input[++c] = '\0';
+        }
         data = strtok(input, "#");
         if (compare(data, "---"))
         {
